@@ -1,4 +1,7 @@
-const userName = window.location.search.split('=')[1];
+let userName = window.location.search.split('=')[1];
+if (userName == undefined) {
+  userName = "tinkabel85";
+};
 console.log(userName);
 
 fetch(`https://api.github.com/users/${userName}`)
